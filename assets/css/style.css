@@ -136,6 +136,7 @@ p {
     font-weight: 500;
     color: #be3591;
     line-height: 55px;
+    border-left: solid 5px #be3591;
 }
 
 @media (max-width: 767px) {
@@ -148,7 +149,7 @@ p {
 .section-title .text {
     font-size: 16px;
     line-height: 24px;
-    color: #6c6c6c;
+    color: #be3591;
     margin-top: 24px;
 }
 
@@ -802,7 +803,7 @@ p {
     background: -webkit-linear-gradient(left, white 0%, #fff 100%);
     background: -o-linear-gradient(left, white 0%, #fff 100%);
     background: linear-gradient(to right, white 0%, #fff 100%);
-    padding: 10px 0;
+    padding: 20px 0;
     position: absolute;
     top: 0;
     left: 0;
@@ -1717,6 +1718,8 @@ p {
 
 /*===========================
          4.ABOUT css 
+
+         border-left: solid 5px #be3591;
 ===========================*/
 
 .boxFlu {
@@ -1732,7 +1735,7 @@ p {
     float: left;
     width: 100%;
     position: absolute;
-    top: -100px;
+    top: -140px;
     left: 0;
     z-index: 1;
 }
@@ -3531,7 +3534,8 @@ p {
 }
 
 .about-title-1 {
-    padding-top: 5%;
+    border-left: solid 5px #be3591;
+    padding-left: 20px;
 }
 
 .about-title-text-1 {
