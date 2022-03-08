@@ -1447,3 +1447,10 @@ input.custom-file-input {
     left: 0;
     top: 0;
 }
+
+.app_donwload_2 {
+    padding-top: 30px;
+    max-width: 30%;
+    display: flex;
+    flex-direction: row;
+}
