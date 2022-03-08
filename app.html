@@ -92,92 +92,68 @@
         <!-- navbar area -->
     </section>
 
-    <section id="work" class="sessao">
 
-        <p class="tituloSessao">trabalhe conosco</p>
+    <!-- App page -->
 
-        <p class="subtitulo3" style="width: 70%; margin-bottom: 5%;"> venha fazer parte do time lessloss, atuação em todo territorio nacional</p>
+    <section id="app1" style="margin-bottom: 0px;" class="sessao">
 
-        <!-- <div class="accordion" id="accordionExample">
-             <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingOne">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                        instalador
-                         </button>
-                    </h2>
-                    <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                        <div class="accordion-body">
-                        <p class="texto_work">a LessLoss possui sua própria base de instaladores credenciados que são
-                        acionados quando existe a necessidade de instalação ou manutenção na rede hidráulica e
-                        de gás dos seus clientes. Faça parte da nossa equipe. Cadastre-se agora!
-                        </p>
+        <p class="tituloSessao" style="margin-bottom:0%; margin-top: 50px;">na palma da sua mão</p>
+        <div class="baixar_apps" style="position: relative; text-align: right;">
+            <a target="_blank" href="https://play.google.com/store/apps/details?id=io.ionic.lesslossi">
+                <img width="100px" src="./assets/images/loja_playstore.png" class="img0" alt="">
+                <p class="textinho">clique para baixar</P>
+            </a>
+
+        </div>
+
+    </section>
+
+    <section id="app2" style="padding-top: 0px;" class="sessao">
+
+        <div class="container-fluid">
+
+            <div class="row">
+
+                <div class="col-7">
+
+                    <div class="row">
+                        <div class="col-3 pe-0" style="margin-bottom: 5%;">
+                            <img class="appIcon" src="./assets/images/appIcon1.png" alt="">
+                        </div>
+                        <div class="col-8 my-auto ps-2">
+                            <p class="subtitulo5 ">facilidade</p>
+                        </div>
+
+                        <div class="col-3 pe-0" style="margin-bottom: 5%;">
+                            <img class="appIcon" src="./assets/images/appIcon2.png" alt="">
+                        </div>
+                        <div class="col-8 my-auto ps-2">
+                            <p class="subtitulo5 ">controle</p>
+                        </div>
+
+                        <div class="col-3 pe-0" style="margin-bottom: 5%;">
+                            <img class="appIcon" src="./assets/images/appIcon3.png" alt="">
+                        </div>
+                        <div class="col-8 my-auto ps-2">
+                            <p class="subtitulo5 ">tecnologia</p>
+                        </div>
+
+                        <div class="col-3 pe-0" style="margin-bottom: 5%;">
+                            <img class="appIcon" src="./assets/images/appIcon4.png" alt="">
+                        </div>
+                        <div class="col-8 my-auto ps-2">
+                            <p class="subtitulo5 ">sustentabilidade</p>
+                        </div>
+
+                        <p style="font-size: 1.5rem; color: #BE3591; width: 80%; margin-top: 5%;" class="mx-auto">Queremos ser o maior aliado do nosso consumidor, encontre sua solução na palma da mão!</p>
                     </div>
-            </div>
                 </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingTwo">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                    agente comercial
-                    </button>
-                    </h2>
-                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
-                    <p class="texto_work">a LessLoss possui uma equipe de agentes comerciais que montam suas
-                    carteiras de indicações e conseguem ganhar uma renda recorrente.</p>
-                    </div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingThree">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                        representante comercial
-                    </button>
-                    </h2>
-                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
-                    <p class="texto_work">o representante LessLoss é o responsável pelas atividades comerciais e de
-                    atendimento da empresa em cada localidade, por isso ele recebe uma parte da mensalidade
-                    de toda a carteira da região de atuação.</p>
-                    </div>
-                    </div>
-                </div>
-        </div> -->
-
-
-
-        <p class="subtitulo3" style="width: 70%; margin-top: 5%;">entre em contato abaixo:</p>
-        <form action="trabalhar.php" method="post" style="margin-top: 5%;">
-
-            <input class="form-control mb-3 input1" type="text" style="width: 50%;" name="nome" placeholder="nome" required>
-
-            <input class="form-control mb-3 input1" type="tel" onkeyup="if (/\D/g.test(this.value)) this.value = this.value.replace(/\D/g,'')" style="width: 50%;" maxlength="15" name="telefone" placeholder="telefone" required>
-
-            <select class="form-select mb-3 input1" name="tipo" aria-label="select" required>
-                <option value="" disabled selected hidden>qual sua função?</option>
-                <option value="representante_comercial">instalador</option>
-                <option value="agente_comercial">agente comercial</option>
-                <option value="instalador">representante comercial</option>
-            </select>
-
-            <input class="form-control mb-3 input1" type="email" style="width: 50%;" name="email" placeholder="email" required>
-
-
-            <textarea class="form-control mb-3 input2" style="width: 70%;" name="mensagem" id="mensagem" rows="5" placeholder="faça sua observações!"></textarea>
-
-            <div>
-                <label for="file" class="custom-file-input">anexar curriculo</label>
-                <input type="file" name="file" class="custom-file-input"></input>
 
             </div>
 
-            <br>
+            <img class="imgApp3" src="./assets/images/app_lessloss.png" alt="">
 
-            <br>
-
-            <input class="inputSend" type="submit" value="  enviar  ">
-
-        </form>
-
+        </div>
 
     </section>
 
@@ -212,18 +188,20 @@
         </div>
         <!-- container -->
     </div>
-    <!-- footer copyright -->
 
 
     <!--====== FOOTER FOUR PART ENDS ======-->
 
     <!--====== BACK TOP TOP PART START ======-->
 
+    <a href="# " class="back-to-top "><i class="lni-chevron-up "></i></a>
+
     <!--====== BACK TOP TOP PART ENDS ======-->
 
     <!--====== PART START ======-->
 
     <!--====== PART ENDS ======-->
+
 
     <!--====== jquery js ======-->
     <script src="assets/js/vendor/modernizr-3.6.0.min.js "></script>
@@ -255,5 +233,6 @@
 
     <!--====== Main js ======-->
     <script src="assets/js/main.js "></script>
+
 
 </body>
