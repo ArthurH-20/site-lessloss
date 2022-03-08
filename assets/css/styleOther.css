@@ -1454,3 +1454,19 @@ input.custom-file-input {
     display: flex;
     flex-direction: row;
 }
+
+
+/* input[type="file"] {
+    display: none;
+}
+
+label {
+    padding: 20px 10px;
+    width: 200px;
+    background-color: #be3591;
+    color: #FFF;
+    text-transform: lowercase;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 25px;
+} */

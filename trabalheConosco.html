@@ -142,38 +142,87 @@
 
 
         <p class="subtitulo3" style="width: 70%; margin-top: 5%;">entre em contato abaixo:</p>
-        <form action="trabalhar.php" method="post" style="margin-top: 5%;">
+        <form style="margin-top: 5%;">
 
-            <input class="form-control mb-3 input1" type="text" style="width: 50%;" name="nome" placeholder="nome" required>
+            <input id="nome" class="form-control mb-3 input1" type="text" style="width: 50%;" name="nome" placeholder="nome" required>
 
-            <input class="form-control mb-3 input1" type="tel" onkeyup="if (/\D/g.test(this.value)) this.value = this.value.replace(/\D/g,'')" style="width: 50%;" maxlength="15" name="telefone" placeholder="telefone" required>
+            <input id="telefone" class="form-control mb-3 input1" type="tel" onkeyup="if (/\D/g.test(this.value)) this.value = this.value.replace(/\D/g,'')" style="width: 50%;" maxlength="15" name="telefone" placeholder="telefone">
 
-            <select class="form-select mb-3 input1" name="tipo" aria-label="select" required>
-                <option value="" disabled selected hidden>qual sua função?</option>
-                <option value="representante_comercial">instalador</option>
+            <select class="form-select mb-3 input1" name="tipo" aria-label="select">
+                <option value=""disabled selected hidden>qual sua função?</option>
+                <option value="instalador">instalador</option>
                 <option value="agente_comercial">agente comercial</option>
-                <option value="instalador">representante comercial</option>
+                <option value="representante_comercial">representante comercial</option>
             </select>
 
-            <input class="form-control mb-3 input1" type="email" style="width: 50%;" name="email" placeholder="email" required>
+            <input id="email" class="form-control mb-3 input1" type="email" style="width: 50%;" name="email" placeholder="email" required>
 
 
-            <textarea class="form-control mb-3 input2" style="width: 70%;" name="mensagem" id="mensagem" rows="5" placeholder="faça sua observações!"></textarea>
+            <textarea id="mensagem" class="form-control mb-3 input2" style="width: 70%;" name="mensagem" id="mensagem" rows="5" placeholder="faça sua observações!"></textarea>
 
-            <div>
-                <label for="file" class="custom-file-input">anexar curriculo</label>
-                <input type="file" name="file" class="custom-file-input"></input>
-
-            </div>
-
-            <br>
+            <!-- <div>
+                <label for="curriculo"> anexar curriculo </label>
+                <input type="file" name="curriculo" id="fileinput" accept=".pdf">
+            </div> -->
 
             <br>
 
-            <input class="inputSend" type="submit" value="  enviar  ">
+            <br>
+
+            <button id="enviar">enviar</button>
+
 
         </form>
+        <script>
+            function upload() {
+                console.log("aqui");
+                const nome = document.getElementById('nome');
+                const email = document.getElementById('email');
+                const telefone = document.getElementById('telefone');
+                const mensagem = document.getElementById('mensagem');
+                const file = document.getElementById('fileinput');
 
+                // console.log({
+                //     file,
+                //     nome,
+                //     email
+                // })
+
+                const formData = new FormData();
+                formData.append('nome', nome.value);
+                formData.append('email', email.value);
+                formData.append('telefone', telefone.value);
+                formData.append('mensagem', mensagem.value);
+                formData.append('file', file);
+
+
+                //formData.append('file', "file");
+
+                fetch('http://192.168.0.166:3001/site-lessloss/formulario/contato', { // Your POST endpoinhtt
+                    method: 'POST',
+                    headers: {
+                        // Content-Type may need to be completely *omitted*
+                        // or you may need something
+                        "Content-Type": 'application/json'
+                    },
+                    // body: formData // This is your file object
+                    body: JSON.stringify({
+                            'nome': nome.value,
+                            'email': email.value,
+                            'telefone': telefone.value,
+                            'mensagem': mensagem.value
+                                // 'file': file
+                        }) // This is your file object
+                }).then(
+                    response => response.json() // if the response is a JSON object
+                ).then(
+                    success => console.log(success) // Handle the success response object
+                ).catch(
+                    error => console.log(error) // Handle the error response object
+                );
+            };
+            document.getElementById("enviar").addEventListener("click", upload);
+        </script>
 
     </section>
 
