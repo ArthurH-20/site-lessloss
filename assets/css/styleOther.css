@@ -1234,11 +1234,6 @@ p {
 
 @media screen and (max-width: 600px) {
     /* ================= Geral ================= */
-    p,
-    a,
-    .inputSend {
-        font-size: 0.6rem !important;
-    }
     .tituloSessao {
         font-size: 1.25rem !important;
         border-left: 2px solid #be3591;
