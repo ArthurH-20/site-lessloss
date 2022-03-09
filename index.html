@@ -538,7 +538,8 @@
                             </ul>
                         </div>
                         <div class="pricing-btn rounded-buttons text-center ">
-                            <a class="main-btn rounded-three " href="# ">assinar</a>
+                            <a class="main-btn rounded-three " href=" ">assinar</a>
+                            <!-- target="_blank" href="https://api.whatsapp.com/send?l=pt&amp;phone=55818117-5594" -->
                         </div>
                     </div>
                     <!-- pricing style one -->
@@ -906,11 +907,11 @@
 
                         }) // This is your file object
                 }).then(
-                    response => response.json() // if the response is a JSON object
-                ).then(
-                    success => console.log(success) // Handle the success response object
+                    response => response.json(), // if the response is a JSON object
+                    success => console.log(success),
+                    alert("enviado com sucesso!") // Handle the success response object
                 ).catch(
-                    error => console.log(error) // Handle the error response object
+                    error => console.log(error)
                 );
             };
             document.getElementById("enviar").addEventListener("click", upload);

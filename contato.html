@@ -100,16 +100,16 @@
 
             <p class="subtitulo3" style="width: 70%; margin-bottom: 5%;">agende sua visita e faça o orçamento que atenda a sua necessidade</p>
 
-            <form method="post">
+            <form>
 
-                <input id="nome" class="form-control mb-3 input1" type="text" style="width: 50%;" name="nome" placeholder="nome" required>
+                <input id="nome" class="form-control mb-3 input1" type="text" style="width: 50%;" name="nome" placeholder="nome *" required>
 
-                <input id="telefone" class="form-control mb-3 input1" type="tel" onkeyup="if (/\D/g.test(this.value)) this.value = this.value.replace(/\D/g,'')" style="width: 50%;" maxlength="15" name="telefone" placeholder="telefone" required>
+                <input id="telefone" class="form-control mb-3 input1" type="tel" onkeyup="if (/\D/g.test(this.value)) this.value = this.value.replace(/\D/g,'')" style="width: 50%;" maxlength="15" name="telefone" placeholder="telefone *" required>
 
-                <input id="email" class="form-control mb-3 input1" type="email" style="width: 50%;" name="email" placeholder="email" required>
+                <input id="email" class="form-control mb-3 input1" type="email" style="width: 50%;" name="email" placeholder="email *" required>
 
                 <select class="form-select mb-3 input1" name="tipo" aria-label="select" required>
-                <option value="" disabled selected hidden>tipo de usuário</option>
+                <option value="" disabled selected hidden>tipo de usuário *</option>
                 <option value="morador">morador</option>
                 <option value="sindico">síndico</option>
                 <option value="gestor">gestor</option>
@@ -118,54 +118,17 @@
             </select>
 
 
-                <input id="local" class="form-control mb-3 input1" type="text" style="width: 50%;" name="local" placeholder="local" required>
+                <input id="local" class="form-control mb-3 input1" type="text" style="width: 50%;" name="local" placeholder="local *" required>
 
-                <input data="data" type='text' autocomplete="off" class="form-control mb-3 input1" name="dia" placeholder="dd/mm/aaaa" data-provide="datepicker" required>
+                <input data="data" type='text' autocomplete="off" class="form-control mb-3 input1" name="dia" placeholder="dd/mm/aaaa *" data-provide="datepicker" required>
 
-                <textarea id="mensagem" class="form-control mb-3 input2" style="width: 70%;" name="mensagem" id="mensagem" rows="5" placeholder="Conte-nos seu problema! Sua solução está aqui."></textarea>
+                <textarea id="mensagem" class="form-control mb-3 input2" style="width: 70%;" name="mensagem" id="mensagem" rows="5" placeholder="Conte-nos seu problema! Sua solução está aqui. *"></textarea>
 
                 <button id="enviar" class="inputSend">enviar</button>
             </form>
 
         </div>
-        <script>
-            const upload = () => {
-                console.log("aqui");
-                const nome = document.getElementById('nome');
-                const telefone = document.getElementById('telefone');
-                const email = document.getElementById('email');
-                const local = document.getElementById('local');
-                const mensagem = document.getElementById('mensagem');
 
-
-
-                //formData.append('file', "file");
-
-                fetch('http://192.168.0.166:3001/site-lessloss/formulario/contato', { // Your POST endpoinhtt
-                    method: 'POST',
-                    headers: {
-                        // Content-Type may need to be completely *omitted*
-                        // or you may need something
-                        "Content-Type": 'application/json'
-                    },
-                    // body: formData // This is your file object
-                    body: JSON.stringify({
-                            'nome': nome.value,
-                            'telefone': telefone.value,
-                            'email': email.value,
-                            'local': local.value,
-                            'mensagem': mensagem.value
-                        }) // This is your file object
-                }).then(
-                    response => response.json() // if the response is a JSON object
-                ).then(
-                    success => console.log(success) // Handle the success response object
-                ).catch(
-                    error => console.log(error) // Handle the error response object
-                );
-            };
-            document.getElementById("enviar").addEventListener("click", upload);
-        </script>
     </section>
 
 
@@ -236,5 +199,52 @@
     <!--====== Main js ======-->
     <script src="assets/js/main.js "></script>
 
+    <script>
+        const upload = () => {
+
+            console.log("aqui");
+            const nome = document.getElementById('nome');
+            const telefone = document.getElementById('telefone');
+            const email = document.getElementById('email');
+            const local = document.getElementById('local');
+            const mensagem = document.getElementById('mensagem');
+
+            if (nome.value == "" || telefone.value == "" || email.value == "" || local.value == "" || mensagem.value == "") {
+                alert("Preencha todos os Campos")
+                throw new Error("a")
+            }
+            if (nome.value == "") {
+                console.log({
+                    nome
+                })
+            }
+            //formData.append('file', "file");
+
+            fetch('http://192.168.0.166:3001/site-lessloss/formulario/contato', { // Your POST endpoinhtt
+                method: 'POST',
+                headers: {
+                    // Content-Type may need to be completely *omitted*
+                    // or you may need something
+                    "Content-Type": 'application/json'
+                },
+                // body: formData // This is your file object
+                body: JSON.stringify({
+                        'nome': nome.value,
+                        'telefone': telefone.value,
+                        'email': email.value,
+                        'local': local.value,
+                        'mensagem': mensagem.value
+                    }) // This is your file object
+            }).then(
+                response => response.json(), // if the response is a JSON object
+                success => console.log(success),
+                alert("enviado com sucesso!") // Handle the success response object
+            ).catch(
+                error => console.log(error)
+                // Handle the error response object
+            );
+        };
+        document.getElementById("enviar").addEventListener("click", upload);
+    </script>
 
 </body>

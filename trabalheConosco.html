@@ -169,7 +169,7 @@
 
             <br>
 
-            <button id="enviar">enviar</button>
+            <button id="enviar" class="inputSend">enviar</button>
 
 
         </form>
@@ -180,20 +180,6 @@
                 const email = document.getElementById('email');
                 const telefone = document.getElementById('telefone');
                 const mensagem = document.getElementById('mensagem');
-                const file = document.getElementById('fileinput');
-
-                // console.log({
-                //     file,
-                //     nome,
-                //     email
-                // })
-
-                const formData = new FormData();
-                formData.append('nome', nome.value);
-                formData.append('email', email.value);
-                formData.append('telefone', telefone.value);
-                formData.append('mensagem', mensagem.value);
-                formData.append('file', file);
 
 
                 //formData.append('file', "file");
@@ -211,12 +197,11 @@
                             'email': email.value,
                             'telefone': telefone.value,
                             'mensagem': mensagem.value
-                                // 'file': file
                         }) // This is your file object
                 }).then(
-                    response => response.json() // if the response is a JSON object
-                ).then(
-                    success => console.log(success) // Handle the success response object
+                    response => response.json(), // if the response is a JSON object
+                    success => console.log(success),
+                    alert("enviado com sucesso!") // Handle the success response object
                 ).catch(
                     error => console.log(error) // Handle the error response object
                 );
