@@ -276,7 +276,7 @@
                             <img src="assets/images/ico-peq01.png " alt="Icon ">
                         </div>
                         <div class="about-content media-body ">
-                            <h4 class="about-title ">atulização em tempo real</h4>
+                            <h4 class="about-title ">atualização em tempo real</h4>
                             <p class="text ">a tecnologia IoT é o que existe de mais moderno para a gestão de recursos em tempo real e com máxima eficiência.</p>
                         </div>
                     </div>
@@ -556,10 +556,10 @@
                         <div class="pricing-list ">
                             <ul>
                                 <li>
-                                    <i class="lni-check-mark-circle "></i> Aplicativo para condominios
+                                    <i class="lni-check-mark-circle "></i> Aplicativo para condomínios
                                 </li>
                                 <li>
-                                    <i class="lni-check-mark-circle "></i> Interação Superlogica (obs)
+                                    <i class="lni-check-mark-circle "></i> Interação Superlógica (obs)
                                 </li>
                             </ul>
                         </div>
@@ -832,7 +832,7 @@
                     <div class="contact-two mt-50 wow fadeIn " data-wow-duration="1.5s " data-wow-delay="0.2s ">
                         <h4 class="contact-title ">entre em contato</h4>
                         <p class="text ">
-                            conte-nos seus problema! sua solução está aqui.
+                            conte-nos seus problemas! sua solução está aqui.
                         </p>
                         <ul class="contact-info ">
                             <li>
@@ -849,28 +849,28 @@
                         <form id="contact-form " action="" method="post ">
                             <div class="form-input mt-15 ">
                                 <div class="input-items default ">
-                                    <input type="text" placeholder="nome " nome="nome " />
+                                    <input id="nome" type="text" placeholder="nome " nome="nome " />
                                     <i class="lni-user "></i>
                                 </div>
                             </div>
                             <!-- form input -->
                             <div class="form-input mt-15 ">
                                 <div class="input-items default ">
-                                    <input type="email " placeholder="e-mail " nome="email " />
+                                    <input id="email" type="email " placeholder="e-mail " nome="email " />
                                     <i class="lni-envelope "></i>
                                 </div>
                             </div>
                             <!-- form input -->
                             <div class="form-input mt-15 ">
                                 <div class="input-items default ">
-                                    <textarea placeholder="mensagem " name="mensagem "></textarea>
+                                    <textarea id="mensagem" placeholder="mensagem " name="mensagem "></textarea>
                                     <i class="lni-pencil-alt "></i>
                                 </div>
                             </div>
                             <!-- form input -->
                             <p class="form-message "></p>
                             <div class="form-input rounded-buttons mt-20 ">
-                                <button type="submit " class="main-btn rounded-three ">
+                                <button id="enviar" type="submit " class="main-btn rounded-three ">
                                     enviar
                                 </button>
                             </div>
@@ -889,18 +889,9 @@
                 const nome = document.getElementById('nome');
                 const email = document.getElementById('email');
                 const mensagem = document.getElementById('mensagem');
-                const file = document.getElementById('fileinput');
-
-                const formData = new FormData();
-                formData.append('nome', nome.value);
-                formData.append('email', email.value);
-                formData.append('mensagem', mensagem.value);
-                formData.append('file', file);
 
 
-                //formData.append('file', "file");
-
-                fetch('http://192.168.0.26:3001/site-lessloss/formulario', { // Your POST endpoinhtt
+                fetch('http://192.168.0.166:3001/site-lessloss/formulario/duvidas', { // Your POST endpoinhtt
                     method: 'POST',
                     headers: {
                         // Content-Type may need to be completely *omitted*
@@ -911,8 +902,8 @@
                     body: JSON.stringify({
                             'nome': nome.value,
                             'email': email.value,
-                            'mensagem': mensagem.value,
-                            // 'file': file
+                            'mensagem': mensagem.value
+
                         }) // This is your file object
                 }).then(
                     response => response.json() // if the response is a JSON object

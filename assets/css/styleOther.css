@@ -827,7 +827,7 @@ p {
 }
 
 .subtitulo5 {
-    font-size: 2rem !important;
+    font-size: 24px;
     color: #be3591;
 }
 
@@ -1234,6 +1234,10 @@ p {
 
 @media screen and (max-width: 600px) {
     /* ================= Geral ================= */
+    p,
+    .inputSend {
+        font-size: 0.8rem !important;
+    }
     .tituloSessao {
         font-size: 1.25rem !important;
         border-left: 2px solid #be3591;
@@ -1404,5 +1408,11 @@ input.custom-file-input {
     .app_donwload_2 {
         max-width: 300%;
     }
-    .subtitulo5 {}
+    .imgApp3 {
+        position: absolute;
+        right: 2%;
+        top: 1%;
+        width: 35%;
+        z-index: -1;
+    }
 }

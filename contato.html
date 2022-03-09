@@ -137,18 +137,11 @@
                 const local = document.getElementById('local');
                 const mensagem = document.getElementById('mensagem');
 
-                console.log(nome);
-                const formData = new FormData();
-                formData.append('nome', nome.value);
-                formData.append('telefone', telefone.value);
-                formData.append('email', email.value);
-                formData.append('local', local.value);
-                formData.append('mensagem', mensagem.value);
 
 
                 //formData.append('file', "file");
 
-                fetch('http://192.168.0.166:3001/site-lessloss/formulario', { // Your POST endpoinhtt
+                fetch('http://192.168.0.166:3001/site-lessloss/formulario/contato', { // Your POST endpoinhtt
                     method: 'POST',
                     headers: {
                         // Content-Type may need to be completely *omitted*
