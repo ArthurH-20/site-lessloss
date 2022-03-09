@@ -846,10 +846,10 @@
                 </div>
                 <div class="col-lg-6 ">
                     <div class="contact-form form-style-one mt-35 wow fadeIn " data-wow-duration="1.5s " data-wow-delay="0.5s ">
-                        <form id="contact-form " action="assets/contact.php " method="post ">
+                        <form id="contact-form " action="" method="post ">
                             <div class="form-input mt-15 ">
                                 <div class="input-items default ">
-                                    <input type="text " placeholder="nome " nome="nome " />
+                                    <input type="text" placeholder="nome " nome="nome " />
                                     <i class="lni-user "></i>
                                 </div>
                             </div>
@@ -890,12 +890,6 @@
                 const email = document.getElementById('email');
                 const mensagem = document.getElementById('mensagem');
                 const file = document.getElementById('fileinput');
-
-                // console.log({
-                //     file,
-                //     nome,
-                //     email
-                // })
 
                 const formData = new FormData();
                 formData.append('nome', nome.value);

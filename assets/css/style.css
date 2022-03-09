@@ -2308,7 +2308,7 @@ p {
     -ms-transition: all 0.5s ease-out 0s;
     -o-transition: all 0.5s ease-out 0s;
     transition: all 0.5s ease-out 0s;
-    background-image: url(../images/box08_b.png);
+    background-image: url(../images/box07_b.png);
     background-repeat: no-repeat;
     -webkit-transform: scale(0.95);
     -moz-transform: scale(0.95);
@@ -2337,7 +2337,7 @@ p {
     -ms-transition: all 0.5s ease-out 0s;
     -o-transition: all 0.5s ease-out 0s;
     transition: all 0.5s ease-out 0s;
-    background-image: url(../images/box08_b.png);
+    background-image: url(../images/box06_b.png);
     background-repeat: no-repeat;
     -webkit-transform: scale(0.95);
     -moz-transform: scale(0.95);
@@ -2366,7 +2366,7 @@ p {
     -ms-transition: all 0.5s ease-out 0s;
     -o-transition: all 0.5s ease-out 0s;
     transition: all 0.5s ease-out 0s;
-    background-image: url(../images/box09_b.png);
+    background-image: url(../images/box08_b.png);
     background-repeat: no-repeat;
     -webkit-transform: scale(0.95);
     -moz-transform: scale(0.95);
@@ -2395,7 +2395,7 @@ p {
     -ms-transition: all 0.5s ease-out 0s;
     -o-transition: all 0.5s ease-out 0s;
     transition: all 0.5s ease-out 0s;
-    background-image: url(../images/quadro.png);
+    background-image: url(../images/box09_b.png);
     background-repeat: no-repeat;
     -webkit-transform: scale(0.95);
     -moz-transform: scale(0.95);
@@ -2917,164 +2917,6 @@ p {
 
 
 /*===========================
-        28.ERROR css 
-===========================*/
-
-.testimonial-area {
-    padding-top: 100px;
-    padding-bottom: 70px;
-    background-color: #f4f6f7;
-}
-
-.testimonial-2 {
-    background-color: #fff;
-}
-
-.single-testimonial {
-    background-color: #fff;
-    padding: 30px;
-    -webkit-box-shadow: 0 0px 20px 0 rgba(0, 0, 0, 0.1);
-    -moz-box-shadow: 0 0px 20px 0 rgba(0, 0, 0, 0.1);
-    box-shadow: 0 0px 20px 0 rgba(0, 0, 0, 0.1);
-}
-
-.single-testimonial .testimonial-image img {
-    width: 90px;
-    border-radius: 50%;
-    display: inline-block;
-}
-
-.single-testimonial .testimonial-content {
-    padding-top: 25px;
-}
-
-.single-testimonial .testimonial-content .text {
-    font-size: 16px;
-    line-height: 24px;
-    color: #121212;
-    border-bottom: 1px solid #cbced1;
-    padding-bottom: 24px;
-}
-
-.single-testimonial .testimonial-content .author-name {
-    font-size: 18px;
-    font-weight: 600;
-    color: #121212;
-    margin-top: 24px;
-}
-
-.single-testimonial .testimonial-content .sub-title {
-    font-size: 14px;
-    line-height: 24px;
-    color: #a4a4a4;
-}
-
-.testimonial-active-2 .slick-dots,
-.testimonial-active .slick-dots {
-    text-align: center;
-}
-
-.testimonial-active-2 .slick-dots li,
-.testimonial-active .slick-dots li {
-    display: inline-block;
-    margin: 0 3px;
-}
-
-.testimonial-active-2 .slick-dots li button,
-.testimonial-active .slick-dots li button {
-    font-size: 0;
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background-color: #cbced1;
-    border: 0;
-    cursor: pointer;
-}
-
-.testimonial-active-2 .slick-dots li.slick-active button,
-.testimonial-active .slick-dots li.slick-active button {
-    background-color: #be3591;
-}
-
-.single-testimonial-4 {
-    border: 2px solid #cbced1;
-    padding: 25px 30px;
-    border-radius: 8px;
-    background-color: #fff;
-}
-
-.single-testimonial-4 .testimonial-author .author-image img {
-    width: 80px;
-    border-radius: 50%;
-}
-
-.single-testimonial-4 .testimonial-author .author-name {
-    padding-left: 20px;
-}
-
-@media (max-width: 767px) {
-    .single-testimonial-4 .testimonial-author .author-name {
-        padding-left: 0;
-        padding-top: 15px;
-    }
-}
-
-@media only screen and (min-width: 576px) and (max-width: 767px) {
-    .single-testimonial-4 .testimonial-author .author-name {
-        padding-left: 20px;
-        padding-top: 0;
-    }
-}
-
-.single-testimonial-4 .testimonial-author .author-name .name {
-    font-size: 18px;
-    font-weight: 600;
-    line-height: 24px;
-    color: #121212;
-}
-
-.single-testimonial-4 .testimonial-author .author-name .sub-title {
-    font-size: 14px;
-    line-height: 24px;
-    color: #a4a4a4;
-}
-
-.single-testimonial-4 .testimonial-text {
-    margin-top: 25px;
-}
-
-.single-testimonial-4 .testimonial-text .text {
-    font-size: 14px;
-    line-height: 24px;
-    color: #121212;
-}
-
-.testimonial-active-4 .slick-dots {
-    text-align: center;
-    margin-top: 25px;
-}
-
-.testimonial-active-4 .slick-dots li {
-    display: inline-block;
-    margin: 0 3px;
-}
-
-.testimonial-active-4 .slick-dots li button {
-    font-size: 0;
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background-color: #cbced1;
-    border: 0;
-    cursor: pointer;
-}
-
-.testimonial-active-4 .slick-dots li.slick-active button {
-    background-color: #38f9d7;
-}
-
-
-/*===========================
        25.CLIENT css 
 ===========================*/
 
@@ -3090,76 +2932,6 @@ p {
     .single-client {
         width: 100%
     }
-}
-
-
-/*===========================
-       21.BLOG css 
-===========================*/
-
-.blog-area {
-    padding-top: 115px;
-    padding-bottom: 120px;
-}
-
-.single-blog .blog-image img {
-    width: 100%;
-    border-radius: 8px;
-}
-
-.single-blog .blog-content {
-    padding-top: 16px;
-}
-
-.single-blog .blog-content .blog-title a {
-    font-size: 20px;
-    font-weight: 600;
-    line-height: 25px;
-    color: #121212;
-    -webkit-transition: all 0.3s ease-out 0s;
-    -moz-transition: all 0.3s ease-out 0s;
-    -ms-transition: all 0.3s ease-out 0s;
-    -o-transition: all 0.3s ease-out 0s;
-    transition: all 0.3s ease-out 0s;
-}
-
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
-    .single-blog .blog-content .blog-title a {
-        font-size: 18px;
-    }
-}
-
-@media (max-width: 767px) {
-    .single-blog .blog-content .blog-title a {
-        font-size: 18px;
-    }
-}
-
-.single-blog .blog-content .blog-title a:hover {
-    color: #38f9d7;
-}
-
-.single-blog .blog-content span {
-    font-size: 14px;
-    line-height: 20px;
-    color: #6c6c6c;
-    margin-top: 8px;
-    margin-right: 10px;
-}
-
-.single-blog .blog-content .text {
-    font-size: 14px;
-    line-height: 20px;
-    color: #121212;
-    margin-top: 16px;
-}
-
-.single-blog .blog-content .more {
-    text-transform: lowercase;
-    font-size: 16px;
-    font-weight: 700;
-    color: #38f9d7;
-    margin-top: 29px;
 }
 
 
