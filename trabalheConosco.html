@@ -150,7 +150,7 @@
 
             <input id="telefone" class="form-control mb-3 input1" type="tel" onkeyup="if (/\D/g.test(this.value)) this.value = this.value.replace(/\D/g,'')" style="width: 50%;" maxlength="15" name="telefone" placeholder="telefone*">
 
-            <select class="form-select mb-3 input1" name="tipo" aria-label="select">
+            <select id="select" class="form-select mb-3 input1" name="tipo" aria-label="select">
                 <option value=""disabled selected hidden>qual sua função?*</option>
                 <option value="instalador">instalador</option>
                 <option value="agente_comercial">agente comercial</option>
@@ -162,10 +162,17 @@
 
             <textarea id="mensagem" class="form-control mb-3 input2" style="width: 70%;" name="mensagem" id="mensagem" rows="5" placeholder="faça suas observações!"></textarea>
 
-            <!-- <div>
-                <label for="curriculo"> anexar curriculo </label>
-                <input type="file" name="curriculo" id="fileinput" accept=".pdf">
-            </div> -->
+
+            <div class="" style="width: 50%; padding-bottom: 35px;">
+                <span class="btn btn-success fileinput-button">
+                    <span>anexar curriculo</span>
+                <input id="file" type="file" accept=".pdf">
+
+
+                </span>
+            </div>
+
+
 
             <br>
 
@@ -178,13 +185,37 @@
         <script>
             function upload() {
                 console.log("aqui");
+
                 const nome = document.getElementById('nome');
                 const email = document.getElementById('email');
                 const telefone = document.getElementById('telefone');
                 const mensagem = document.getElementById('mensagem');
+                const vaga = document.getElementById('select');
+                const inputFile = document.getElementById('file');
+                let arquivos
+                    // consle.log(file.files)
 
+                for (let index = 0; index < inputFile.files.length; index++) {
+                    const f = inputFile.files[index];
+                    console.log("aqui for")
+                    console.log({
+                        f
+                    })
+                    arquivos = f.name
 
-                //formData.append('file', "file");
+                }
+                console.log(vaga.vaule);
+                const formData = new FormData();
+                formData.append('nome', nome.value);
+                formData.append('email', email.value);
+                formData.append('telefone', telefone.value);
+                formData.append('mensagem', mensagem.value);
+                formData.append('file', inputFile.files[0], inputFile.files[0].name)
+
+                console.log({
+                        arquivos
+                    })
+                    //formData.append('file', "file")
 
                 fetch('http://192.168.0.166:3001/site-lessloss/formulario/trabalheComNosco', { // Your POST endpoinhtt
                     method: 'POST',
@@ -193,20 +224,23 @@
                         // or you may need something
                         "Content-Type": 'application/json'
                     },
+                    body: formData
+
                     // body: formData // This is your file object
-                    body: JSON.stringify({
-                            'nome': nome.value,
-                            'email': email.value,
-                            'telefone': telefone.value,
-                            'mensagem': mensagem.value
-                        }) // This is your file object
+                    // body: JSON.stringify({
+                    //         'nome': nome.value,
+                    //         'email': email.value,
+                    //         'telefone': telefone.value,
+                    //         'mensagem': mensagem.value,
+                    //         'file': file.files[0]
+                    //     }) // This is your file object
                 }).then(
                     response => response.json(), // if the response is a JSON object
                     success => console.log(success),
                     alert("enviado com sucesso!") // Handle the success response object
                 ).catch(
-                    error => console.log(error) // Handle the error response object
-                );
+                    error => console.log(error));
+
             };
             document.getElementById("enviar").addEventListener("click", upload);
         </script>
