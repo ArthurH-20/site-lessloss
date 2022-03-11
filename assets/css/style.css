@@ -2206,7 +2206,6 @@ p {
     -o-transition: all 0.5s ease-out 0s;
     transition: all 0.5s ease-out 0s;
     background-image: url(../images/box01_b.png);
-    background-repeat: no-repeat;
     -webkit-transform: scale(0.95);
     -moz-transform: scale(0.95);
     -ms-transform: scale(0.95);
