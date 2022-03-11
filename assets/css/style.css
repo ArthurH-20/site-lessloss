@@ -853,7 +853,7 @@ p {
     padding: 11px 16px;
     color: #be3591;
     text-transform: lowercase;
-    position: relative;
+    position: absolute;
     border-radius: 5px;
     -webkit-transition: all 0.3s ease-out 0s;
     -moz-transition: all 0.3s ease-out 0s;
