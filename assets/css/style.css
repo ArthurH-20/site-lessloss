@@ -1439,7 +1439,20 @@ p {
 
 @media (max-width: 767px) {
     .slider-area .bd-example .carousel .carousel-inner .carousel-item {
-        height: 400px;
+        height: 328px;
+        background-size: contain;
+        /* background-size: 120%; */
+        /* margin-top: 64px; */
+        object-fit: contain;
+        /* width: 200%; */
+    }
+    .carousel-title {
+        margin-left: 190px;
+    }
+    .app_donwload_2 {
+        width: 200%;
+        margin-left: 150px;
+        padding: 0;
     }
 }
 
