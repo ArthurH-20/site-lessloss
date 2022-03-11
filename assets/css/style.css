@@ -2192,6 +2192,78 @@ p {
     transition: all 0.3s ease-out 0s;
 }
 
+.single-portfolio .portfolio-image02 img {
+    width: 100%;
+    -webkit-transition: all 0.3s ease-out 0s;
+    -moz-transition: all 0.3s ease-out 0s;
+    -ms-transition: all 0.3s ease-out 0s;
+    -o-transition: all 0.3s ease-out 0s;
+    transition: all 0.3s ease-out 0s;
+}
+
+.single-portfolio .portfolio-image03 img {
+    width: 100%;
+    -webkit-transition: all 0.3s ease-out 0s;
+    -moz-transition: all 0.3s ease-out 0s;
+    -ms-transition: all 0.3s ease-out 0s;
+    -o-transition: all 0.3s ease-out 0s;
+    transition: all 0.3s ease-out 0s;
+}
+
+.single-portfolio .portfolio-image04 img {
+    width: 100%;
+    -webkit-transition: all 0.3s ease-out 0s;
+    -moz-transition: all 0.3s ease-out 0s;
+    -ms-transition: all 0.3s ease-out 0s;
+    -o-transition: all 0.3s ease-out 0s;
+    transition: all 0.3s ease-out 0s;
+}
+
+.single-portfolio .portfolio-image05 img {
+    width: 100%;
+    -webkit-transition: all 0.3s ease-out 0s;
+    -moz-transition: all 0.3s ease-out 0s;
+    -ms-transition: all 0.3s ease-out 0s;
+    -o-transition: all 0.3s ease-out 0s;
+    transition: all 0.3s ease-out 0s;
+}
+
+.single-portfolio .portfolio-image06 img {
+    width: 100%;
+    -webkit-transition: all 0.3s ease-out 0s;
+    -moz-transition: all 0.3s ease-out 0s;
+    -ms-transition: all 0.3s ease-out 0s;
+    -o-transition: all 0.3s ease-out 0s;
+    transition: all 0.3s ease-out 0s;
+}
+
+.single-portfolio .portfolio-image07 img {
+    width: 100%;
+    -webkit-transition: all 0.3s ease-out 0s;
+    -moz-transition: all 0.3s ease-out 0s;
+    -ms-transition: all 0.3s ease-out 0s;
+    -o-transition: all 0.3s ease-out 0s;
+    transition: all 0.3s ease-out 0s;
+}
+
+.single-portfolio .portfolio-image08 img {
+    width: 100%;
+    -webkit-transition: all 0.3s ease-out 0s;
+    -moz-transition: all 0.3s ease-out 0s;
+    -ms-transition: all 0.3s ease-out 0s;
+    -o-transition: all 0.3s ease-out 0s;
+    transition: all 0.3s ease-out 0s;
+}
+
+.single-portfolio .portfolio-image09 img {
+    width: 100%;
+    -webkit-transition: all 0.3s ease-out 0s;
+    -moz-transition: all 0.3s ease-out 0s;
+    -ms-transition: all 0.3s ease-out 0s;
+    -o-transition: all 0.3s ease-out 0s;
+    transition: all 0.3s ease-out 0s;
+}
+
 .single-portfolio .portfolio-image .portfolio-overlay {
     position: absolute;
     top: 0;
@@ -2206,6 +2278,8 @@ p {
     -o-transition: all 0.5s ease-out 0s;
     transition: all 0.5s ease-out 0s;
     background-image: url(../images/box01_b.png);
+    background-repeat: no-repeat;
+    background-size: cover;
     -webkit-transform: scale(0.95);
     -moz-transform: scale(0.95);
     -ms-transform: scale(0.95);
@@ -2235,6 +2309,7 @@ p {
     transition: all 0.5s ease-out 0s;
     background-image: url(../images/box02_b.png);
     background-repeat: no-repeat;
+    background-size: cover;
     -webkit-transform: scale(0.95);
     -moz-transform: scale(0.95);
     -ms-transform: scale(0.95);
@@ -2264,6 +2339,7 @@ p {
     transition: all 0.5s ease-out 0s;
     background-image: url(../images/box03_b.png);
     background-repeat: no-repeat;
+    background-size: cover;
     -webkit-transform: scale(0.95);
     -moz-transform: scale(0.95);
     -ms-transform: scale(0.95);
@@ -2293,6 +2369,7 @@ p {
     transition: all 0.5s ease-out 0s;
     background-image: url(../images/box04_b.png);
     background-repeat: no-repeat;
+    background-size: cover;
     -webkit-transform: scale(0.95);
     -moz-transform: scale(0.95);
     -ms-transform: scale(0.95);
@@ -2322,6 +2399,7 @@ p {
     transition: all 0.5s ease-out 0s;
     background-image: url(../images/box05_b.png);
     background-repeat: no-repeat;
+    background-size: cover;
     -webkit-transform: scale(0.95);
     -moz-transform: scale(0.95);
     -ms-transform: scale(0.95);
@@ -2351,6 +2429,7 @@ p {
     transition: all 0.5s ease-out 0s;
     background-image: url(../images/box07_b.png);
     background-repeat: no-repeat;
+    background-size: cover;
     -webkit-transform: scale(0.95);
     -moz-transform: scale(0.95);
     -ms-transform: scale(0.95);
@@ -2380,6 +2459,7 @@ p {
     transition: all 0.5s ease-out 0s;
     background-image: url(../images/box06_b.png);
     background-repeat: no-repeat;
+    background-size: cover;
     -webkit-transform: scale(0.95);
     -moz-transform: scale(0.95);
     -ms-transform: scale(0.95);
@@ -2438,6 +2518,7 @@ p {
     transition: all 0.5s ease-out 0s;
     background-image: url(../images/box09_b.png);
     background-repeat: no-repeat;
+    background-size: cover;
     -webkit-transform: scale(0.95);
     -moz-transform: scale(0.95);
     -ms-transform: scale(0.95);
