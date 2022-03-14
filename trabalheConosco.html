@@ -171,12 +171,8 @@
 
 
             <div class="" style="width: 50%; padding-bottom: 35px;">
-                <span class="btn btn-success fileinput-button">
-                    <span>anexar curriculo</span>
+                <label class="subtitulo7" for="myfile">anexar curriculo:</label>
                 <input id="file" type="file" accept=".pdf">
-
-
-                </span>
             </div>
 
 
@@ -216,6 +212,7 @@
                 formData.append('nome', nome.value);
                 formData.append('email', email.value);
                 formData.append('telefone', telefone.value);
+                formData.append('vaga', vaga.value);
                 formData.append('mensagem', mensagem.value);
                 formData.append('file', inputFile.files[0], inputFile.files[0].name)
 
@@ -229,7 +226,7 @@
                     headers: {
                         // Content-Type may need to be completely *omitted*
                         // or you may need something
-                        "Content-Type": 'application/json'
+                        // "Content-Type": 'multipart/form-data'
                     },
                     body: formData
 
