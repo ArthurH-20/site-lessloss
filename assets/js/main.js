@@ -196,11 +196,11 @@ $(function() {
         infinite: true,
         slidesToShow: 5,
         slidesToScroll: 1,
-        speed: 500,
+        speed: 300,
         arrows: false,
         dots: false,
         autoplay: true,
-        pauseOnHover: true,
+        pauseOnHover: false,
         responsive: [{
                 breakpoint: 1200,
                 settings: {

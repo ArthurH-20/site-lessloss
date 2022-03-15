@@ -64,7 +64,7 @@
                                     </li>
                                     <li class="nav-item dropdown">
                                         <div class="dropdown">
-                                            <a style="text-decoration: none;" href="soluções.html" class="dropbtn"> soluções </a>
+                                            <a style="text-decoration: none;" href="solucoes.html" class="dropbtn"> soluções </a>
                                             <div class="dropdown-content">
                                                 <a href="simEmpresas.html">sim empresas</a>
                                                 <a href="simCondominios.html">sim condomínios</a>
@@ -206,6 +206,14 @@
     <script src="assets/js/main.js "></script>
 
     <script>
+        
+        setTimeout(function() {
+            console.log('Execute later after 1 second');
+            const sel = document.getElementById('select');
+            console.log("sel = ", sel);
+            sel.value = 'morador';
+        }, 1000);
+
         const upload = () => {
 
             console.log("aqui");
@@ -243,7 +251,7 @@
                         'local': local.value,
                         'mensagem': mensagem.value,
                         'select': tipo.value,
-                        'date': date.value
+                        'data': date.value
                     }) // This is your file object
             }).then(
                 response => response.json(), // if the response is a JSON object
